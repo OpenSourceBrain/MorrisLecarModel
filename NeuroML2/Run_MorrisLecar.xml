@@ -14,7 +14,7 @@
 <Include file="MorrisLecarCompType.nml"/>
 
 
-<morrisLecarCell id="ml1" C="20" I="18" gL="2" gCa="4" gK="8" VL="-50" VCa="100" VK="-70" V1="0" V2="15" V3="10" V4="10" phi="10"/>
+<morrisLecarCell id="ml1" C="20" I="88" gL="2" gCa="4" gK="8" VL="-50" VCa="100" VK="-70" V1="0" V2="15" V3="10" V4="10" phi="10"/>
 
 
 <network id="net1">
@@ -26,11 +26,15 @@
 
 <Simulation id="sim1" length="220s" step="0.05s" target="net1">
 
-    <Display id="d1" title="Attempts to recreate Fig4 from Morris and Lecar 1981" timeScale="1s">
+    <Display id="d1" title="Attempts to recreate Fig 6 from Morris and Lecar 1981" timeScale="1s">
         <Line id ="fn1" quantity="ml1pop[0]/V" scale="1"  color="#ee40FF" save="V.dat"/>
     </Display>
-    <Display id="d1" title="Attempts to recreate Fig4 from Morris and Lecar 1981 - N value" timeScale="1s">
-        <Line id ="fn1" quantity="ml1pop[0]/x" scale="1"  color="#FFFFFF" save="N.dat"/>
+    <Display id="d2" title="M value" timeScale="1s">
+        <Line id ="fn1" quantity="ml1pop[0]/Mss" scale="1"  color="#FFFFFF" save="Mss.dat"/>
+    </Display>
+    <Display id="d3" title="N & N steady state values" timeScale="1s">
+        <Line id ="fn1" quantity="ml1pop[0]/N" scale="1"  color="#FFFFFF" save="N.dat"/>
+        <Line id ="fn1" quantity="ml1pop[0]/Nss" scale="1"  color="#FF22FF" save="Nss.dat"/>
     </Display>
     
 </Simulation>

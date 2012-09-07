@@ -46,14 +46,12 @@
         <!--Note: using exp in these as tanh, cosh not YET supported in LEMS... -->
         <DerivedVariable name="Mss" dimension="none" value="1 / (1 + exp(-2 * (V - V1) / V2))"/>
         <DerivedVariable name="Nss" dimension="none" value="1 / (1 + exp(-2 * (V - V3) / V4))"/>
-        
+
         <DerivedVariable name="x" dimension="none" value="(V - V3) / (2 * V4)"/>
-        <!--<DerivedVariable name="tauN" dimension="none" value="1 / (phi * cosh((V - V3) / (2 * V4)))"/>
-        <DerivedVariable name="tauN" dimension="none" value="0.1"/>-->
-        <DerivedVariable name="tauN" dimension="none" value="1 / (phi * (exp(x) + exp(-1* x)) / 2)"/>
+        <DerivedVariable name="coshx" dimension="none" value="(exp(x) + exp(-1* x)) / 2"/>
+        <DerivedVariable name="tauN" dimension="none" value="100 / (phi * coshx)"/>
         
         <TimeDerivative variable="V" value="(I - gL * (V - VL) - gCa * Mss * (V - VCa) - gK * N * (V - VK)) / (C * SEC)"/>
-        <!--<TimeDerivative variable="N" value="(N - Nss) / (tauN * SEC)"/>-->
         <TimeDerivative variable="N" value="(Nss - N)/(tauN * SEC)"/>
         
 
