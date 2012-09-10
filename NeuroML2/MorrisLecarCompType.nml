@@ -50,16 +50,14 @@
         <DerivedVariable name="Mss" dimension="none" value="1 / (1 + exp(-2 * (V - V1) / V2))"/>
         <DerivedVariable name="Nss" dimension="none" value="1 / (1 + exp(-2 * (V - V3) / V4))"/>
 
-        <DerivedVariable name="x" dimension="none" value="(V - V3) / (2 * V4)"/>
-        <DerivedVariable name="coshx" dimension="none" value="(exp(x) + exp(-1* x)) / 2"/>
-        <DerivedVariable name="tauN" dimension="none" value="1 / (phi * coshx)"/>
+        <DerivedVariable name="tauN" dimension="none" value="2 / (exp((V - V3) / (2 * V4)) + exp(-(V - V3) / (2 * V4)))"/>
 
         <DerivedVariable name="IL" dimension="none" exposure="IL" value="gL * (V - VL)"/>
         <DerivedVariable name="ICa" dimension="none" exposure="ICa" value="gCa * Mss * (V - VCa)"/>
         <DerivedVariable name="IK" dimension="none" exposure="IK" value="gK * N * (V - VK)"/>
 
         <TimeDerivative variable="V" value="(I - IL - ICa - IK) / (C * SEC)"/>
-        <TimeDerivative variable="N" value="(Nss - N)/(tauN * SEC)"/>
+        <TimeDerivative variable="N" value="phi * (Nss - W) / (tauN * SEC)"/>
         
 
         <OnStart>
