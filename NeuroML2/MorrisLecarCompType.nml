@@ -57,7 +57,7 @@
         <DerivedVariable name="IK" dimension="none" exposure="IK" value="gK * N * (V - VK)"/>
 
         <TimeDerivative variable="V" value="(I - IL - ICa - IK) / (C * SEC)"/>
-        <TimeDerivative variable="N" value="phi * (Nss - W) / (tauN * SEC)"/>
+        <TimeDerivative variable="N" value="phi * (Nss - N) / (tauN * SEC)"/>
         
 
         <OnStart>
