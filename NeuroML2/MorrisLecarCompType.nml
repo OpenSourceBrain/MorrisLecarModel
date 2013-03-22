@@ -37,7 +37,9 @@
     <Constant name="SEC" dimension="time" value="1s"/>
 
     <Exposure name="N" dimension="none"/>
-    <Exposure name="IL" dimension="none"/>
+    <Exposure name="Nss" dimension="none"/>
+    <Exposure name="Mss" dimension="none"/>
+     <Exposure name="IL" dimension="none"/>
     <Exposure name="IK" dimension="none"/>
     <Exposure name="ICa" dimension="none"/>
     
@@ -47,8 +49,8 @@
         <StateVariable name="N" dimension="none" exposure="N"/>
 
         <!--Note: using exp in these as tanh, cosh not YET supported in LEMS... -->
-        <DerivedVariable name="Mss" dimension="none" value="1 / (1 + exp(-2 * (V - V1) / V2))"/>
-        <DerivedVariable name="Nss" dimension="none" value="1 / (1 + exp(-2 * (V - V3) / V4))"/>
+        <DerivedVariable name="Mss" dimension="none" exposure="Mss" value="1 / (1 + exp(-2 * (V - V1) / V2))"/>
+        <DerivedVariable name="Nss" dimension="none" exposure="Nss" value="1 / (1 + exp(-2 * (V - V3) / V4))"/>
 
         <DerivedVariable name="tauN" dimension="none" value="2 / (exp((V - V3) / (2 * V4)) + exp(-(V - V3) / (2 * V4)))"/>
 

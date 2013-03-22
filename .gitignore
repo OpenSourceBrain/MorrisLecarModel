@@ -1,1 +1,5 @@
+*.ode
+*_brian.py
+*.mod
+x86_64
 *.dat
