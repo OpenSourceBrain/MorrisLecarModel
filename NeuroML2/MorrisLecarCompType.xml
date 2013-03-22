@@ -1,6 +1,6 @@
-<Lems xmlns="http://www.neuroml.org/lems/0.5"
+<Lems xmlns="http://www.neuroml.org/lems/0.6"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.neuroml.org/lems/0.5 http://sourceforge.net/apps/trac/neuroml/export/1000/NeuroML2/Schemas/LEMS/LEMS_v0.5.xsd">
+      xsi:schemaLocation="http://www.neuroml.org/lems/0.6 https://raw.github.com/LEMS/LEMS/master/Schemas/LEMS/LEMS_v0.6.xsd">
 
 <!--
 
@@ -43,7 +43,7 @@
     <Exposure name="IK" dimension="none"/>
     <Exposure name="ICa" dimension="none"/>
     
-    <Behavior>
+    <Dynamics>
         
         <StateVariable name="V" dimension="none" exposure="V"/>
         <StateVariable name="N" dimension="none" exposure="N"/>
@@ -67,7 +67,7 @@
             <StateAssignment variable="N" value="Nss"/>
         </OnStart>
         
-    </Behavior>
+    </Dynamics>
     
 </ComponentType>
 
