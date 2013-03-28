@@ -1,3 +1,5 @@
+*.png
+*.gv
 *.ode
 *_brian.py
 *.mod
