@@ -6,3 +6,5 @@
 *.mod
 x86_64
 *.dat
+NeuroML2/*.log
+NeuroML2/*.py
