@@ -14,7 +14,7 @@
 <Include file="MorrisLecarCompType.xml"/>
 
 
-<morrisLecarCell id="ml1" C="20" I="65" gL="2" gCa="4" gK="8" VL="-50" VCa="100" VK="-70" V1="0" V2="15" V3="10" V4="10" phi="0.1"/>
+<morrisLecarCell id="ml1" C="20" I="65" gL="2" gCa="4" gK="8" VL="-50" VCa="100" VK="-70" V1="0" V2="15" V3="10" V4="10" t0="0.1"/>
 
 
 <network id="net1">
