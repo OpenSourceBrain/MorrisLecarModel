@@ -31,13 +31,13 @@
     <Parameter name="V2" dimension="none"/>
     <Parameter name="V3" dimension="none"/>
     <Parameter name="V4" dimension="none"/>
-    <Parameter name="t0" dimension="none"/>
+    <Parameter name="T0" dimension="none"/>
 
     <!-- Needed to ensure V, W & I remain dimensionless... -->
     <Constant name="SEC" dimension="time" value="1s"/>
 
-    <Exposure name="N" dimension="none"/>
-    <Exposure name="Nss" dimension="none"/>
+    <Exposure name="W" dimension="none"/>
+    <Exposure name="Wss" dimension="none"/>
     <Exposure name="Mss" dimension="none"/>
      <Exposure name="IL" dimension="none"/>
     <Exposure name="IK" dimension="none"/>
@@ -52,14 +52,14 @@
         <DerivedVariable name="Mss" dimension="none" exposure="Mss" value="1 / (1 + exp(-2 * (V - V1) / V2))"/>
         <DerivedVariable name="Wss" dimension="none" exposure="Wss" value="1 / (1 + exp(-2 * (V - V3) / V4))"/>
 
-        <DerivedVariable name="tauW" dimension="none" value="2 / (exp((V - V3) / (2 * V4)) + exp(-(V - V3) / (2 * V4)))"/>
+        <DerivedVariable name="Tw" dimension="none" value="2 / (exp((V - V3) / (2 * V4)) + exp(-(V - V3) / (2 * V4)))"/>
 
         <DerivedVariable name="IL" dimension="none" exposure="IL" value="gL * (V - VL)"/>
         <DerivedVariable name="ICa" dimension="none" exposure="ICa" value="gCa * Mss * (V - VCa)"/>
         <DerivedVariable name="IK" dimension="none" exposure="IK" value="gK * W * (V - VK)"/>
 
         <TimeDerivative variable="V" value="(I - IL - ICa - IK) / (C * SEC)"/>
-        <TimeDerivative variable="W" value="t0 * (Wss - W) / (tauW * SEC)"/>
+        <TimeDerivative variable="W" value="T0 * (Wss - W) / (Tw * SEC)"/>
         
 
         <OnStart>
