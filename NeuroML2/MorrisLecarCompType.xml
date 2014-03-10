@@ -31,13 +31,13 @@
     <Parameter name="V2" dimension="none"/>
     <Parameter name="V3" dimension="none"/>
     <Parameter name="V4" dimension="none"/>
-    <Parameter name="phi" dimension="none"/>
+    <Parameter name="T0" dimension="none"/>
 
     <!-- Needed to ensure V, W & I remain dimensionless... -->
     <Constant name="SEC" dimension="time" value="1s"/>
 
-    <Exposure name="N" dimension="none"/>
-    <Exposure name="Nss" dimension="none"/>
+    <Exposure name="W" dimension="none"/>
+    <Exposure name="Wss" dimension="none"/>
     <Exposure name="Mss" dimension="none"/>
      <Exposure name="IL" dimension="none"/>
     <Exposure name="IK" dimension="none"/>
@@ -46,25 +46,25 @@
     <Dynamics>
         
         <StateVariable name="V" dimension="none" exposure="V"/>
-        <StateVariable name="N" dimension="none" exposure="N"/>
+        <StateVariable name="W" dimension="none" exposure="W"/>
 
         <!--Note: using exp in these as tanh, cosh not YET supported in LEMS... -->
         <DerivedVariable name="Mss" dimension="none" exposure="Mss" value="1 / (1 + exp(-2 * (V - V1) / V2))"/>
-        <DerivedVariable name="Nss" dimension="none" exposure="Nss" value="1 / (1 + exp(-2 * (V - V3) / V4))"/>
+        <DerivedVariable name="Wss" dimension="none" exposure="Wss" value="1 / (1 + exp(-2 * (V - V3) / V4))"/>
 
-        <DerivedVariable name="tauN" dimension="none" value="2 / (exp((V - V3) / (2 * V4)) + exp(-(V - V3) / (2 * V4)))"/>
+        <DerivedVariable name="Tw" dimension="none" value="2 / (exp((V - V3) / (2 * V4)) + exp(-(V - V3) / (2 * V4)))"/>
 
         <DerivedVariable name="IL" dimension="none" exposure="IL" value="gL * (V - VL)"/>
         <DerivedVariable name="ICa" dimension="none" exposure="ICa" value="gCa * Mss * (V - VCa)"/>
-        <DerivedVariable name="IK" dimension="none" exposure="IK" value="gK * N * (V - VK)"/>
+        <DerivedVariable name="IK" dimension="none" exposure="IK" value="gK * W * (V - VK)"/>
 
         <TimeDerivative variable="V" value="(I - IL - ICa - IK) / (C * SEC)"/>
-        <TimeDerivative variable="N" value="phi * (Nss - N) / (tauN * SEC)"/>
+        <TimeDerivative variable="W" value="T0 * (Wss - W) / (Tw * SEC)"/>
         
 
         <OnStart>
             <StateAssignment variable="V" value="VL"/>
-            <StateAssignment variable="N" value="Nss"/>
+            <StateAssignment variable="W" value="Wss"/>
         </OnStart>
         
     </Dynamics>
