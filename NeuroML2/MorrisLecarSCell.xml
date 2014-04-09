@@ -8,6 +8,7 @@
     Code originally contributed by Daniel Salles Chevitarese and Yiyin Zhou
 
     Attempts to reproduce the model as defined at Scholarpedia: http://www.scholarpedia.org/article/Morris-Lecar
+    Note: the Wikipedia formulation of the model differs: http://en.wikipedia.org/wiki/Morris%E2%80%93Lecar_model
 
     This will be moved to the core set of NeuroML2 definitions when stable!
 
