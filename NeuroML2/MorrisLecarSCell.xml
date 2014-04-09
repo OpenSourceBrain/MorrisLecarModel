@@ -7,8 +7,7 @@
     Definition in LEMS of the Morris Lecar Model
     Code originally contributed by Daniel Salles Chevitarese and Yiyin Zhou
 
-    Attempts to reproduce the model as defined here: http://en.wikipedia.org/wiki/Morris%E2%80%93Lecar_model
-    Note: the Scholarpedia formulation of the model differs: http://www.scholarpedia.org/article/Morris-Lecar
+    Attempts to reproduce the model as defined at Scholarpedia: http://www.scholarpedia.org/article/Morris-Lecar
 
     This will be moved to the core set of NeuroML2 definitions when stable!
 
