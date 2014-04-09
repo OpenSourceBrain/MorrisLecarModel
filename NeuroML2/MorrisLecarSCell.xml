@@ -13,9 +13,9 @@
 
 -->
 
-<ComponentType name="morrisLecarCell"
+<ComponentType name="morrisLecarSCell"
     extends="baseCellMembPotDL"
-    description="The Morris–Lecar model is a biological neuron model developed by Catherine Morris and Harold Lecar to reproduce the variety of oscillatory behavior in relation to Ca++ and K+ conductance in the giant barnacle muscle fiber. Morris-Lecar neurons exhibit both class I and class II neuron excitability. Based on http://en.wikipedia.org/wiki/Morris–Lecar_model">
+    description="The Morris–Lecar model is a biological neuron model developed by Catherine Morris and Harold Lecar to reproduce the variety of oscillatory behavior in relation to Ca++ and K+ conductance in the giant barnacle muscle fiber. Morris-Lecar neurons exhibit both class I and class II neuron excitability. Based on http://www.scholarpedia.org/article/Morris-Lecar">
     
     <Parameter name="C" dimension="none" description="Total capacitance of the cell membrane"/>
     <!-- Have to put C here, because I can't inherit from baseCellMembPot and baseIafCapCell at the same time -->
@@ -38,7 +38,7 @@
     <Exposure name="W" dimension="none"/>
     <Exposure name="Wss" dimension="none"/>
     <Exposure name="Mss" dimension="none"/>
-     <Exposure name="IL" dimension="none"/>
+    <Exposure name="IL" dimension="none"/>
     <Exposure name="IK" dimension="none"/>
     <Exposure name="ICa" dimension="none"/>
     
