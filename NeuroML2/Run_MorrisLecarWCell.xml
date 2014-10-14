@@ -24,7 +24,7 @@
 <!-- End of NeuroML2 content -->
         
 
-<Simulation id="sim1" length="220s" step="0.05s" target="net1">
+<Simulation id="sim1" length="220s" step="0.005s" target="net1">
 
     <Display id="d1" title="Fig 6 from Morris and Lecar 1981: membrane potential" timeScale="1s" xmin="-20" xmax="240" ymin="-60" ymax="30">
         <Line id ="V" quantity="ml1pop[0]/V" scale="1"  color="#000000" timeScale="1s"/>
