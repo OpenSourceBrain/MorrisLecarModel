@@ -34,7 +34,7 @@
     <Parameter name="T0" dimension="none"/>
 
     <!-- Needed to ensure V, W & I remain dimensionless... -->
-    <Constant name="SEC" dimension="time" value="1s"/>
+    <Constant name="MSEC" dimension="time" value="1ms"/>
 
     <Exposure name="W" dimension="none"/>
     <Exposure name="Wss" dimension="none"/>
@@ -58,8 +58,8 @@
         <DerivedVariable name="ICa" dimension="none" exposure="ICa" value="gCa * Mss * (V - VCa)"/>
         <DerivedVariable name="IK" dimension="none" exposure="IK" value="gK * W * (V - VK)"/>
 
-        <TimeDerivative variable="V" value="(I - IL - ICa - IK) / (C * SEC)"/>
-        <TimeDerivative variable="W" value="T0 * (Wss - W) / (Tw * SEC)"/>
+        <TimeDerivative variable="V" value="(I - IL - ICa - IK) / (C * MSEC)"/>
+        <TimeDerivative variable="W" value="T0 * (Wss - W) / (Tw * MSEC)"/>
         
 
         <OnStart>

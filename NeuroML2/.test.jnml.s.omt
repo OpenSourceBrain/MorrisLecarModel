@@ -2,17 +2,17 @@
 # Still in development, subject to change without notice!!
 
 target: Run_MorrisLecarSCell.xml 
-engine: PyLEMS_NeuroML2
+engine: jNeuroML
 mep: .test.mep
 experiments:
   Current clamp:
     observables:
       spike times:
         file: 
-          path: ML_0.dat
+          path: ML_S.dat
           columns: [0,1]
-          scaling: [1, 1]
+          scaling: [1000, 1]
         spike detection: 
           method: threshold
           threshold: 20
-        tolerance: 0.000216
+        tolerance: 0.0199
