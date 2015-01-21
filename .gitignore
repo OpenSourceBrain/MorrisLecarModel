@@ -1,4 +1,5 @@
 *~
+*.m
 *.sbml
 *.png
 *.gv
@@ -9,3 +10,7 @@ x86_64
 *.dat
 NeuroML2/*.log
 NeuroML2/*.py
+
+NeuroML2/Makefile
+*.c
+*.o
