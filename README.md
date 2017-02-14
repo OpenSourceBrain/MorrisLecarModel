@@ -28,4 +28,4 @@ You should get the trace below (\*note: this is not identical to Figure 4 in [Mo
 The definition in LEMS, [MorrisLecarWCell.xml](https://github.com/OpenSourceBrain/MorrisLecarModel/blob/master/NeuroML2/MorrisLecarWCell.xml), 
 currently uses the formalism outlined [here](http://en.wikipedia.org/wiki/Morris%E2%80%93Lecar_model)):
 
-![](NeuroML2/images/ML.png)
+![](https://raw.githubusercontent.com/OpenSourceBrain/MorrisLecarModel/master/NeuroML2/images/ML.png)
