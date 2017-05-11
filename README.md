@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/OpenSourceBrain/MorrisLecarModel.svg?branch=master)](https://travis-ci.org/OpenSourceBrain/MorrisLecarModel)
 ## Morris Lecar Model Neuron
 
 GitHub repository for an OSB project containing the Morris Lecar model.
