@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/OpenSourceBrain/MorrisLecarModel.svg?branch=master)](https://travis-ci.org/OpenSourceBrain/MorrisLecarModel)
 ## Morris Lecar Model Neuron
+[![Continuous build using OMV](https://github.com/OpenSourceBrain/MorrisLecarModel/actions/workflows/omv-ci.yml/badge.svg)](https://github.com/OpenSourceBrain/MorrisLecarModel/actions/workflows/omv-ci.yml)
 
 GitHub repository for an OSB project containing the Morris Lecar model.
 
-This attempts to reproduce the model as defined [here](http://en.wikipedia.org/wiki/Morris%E2%80%93Lecar_model) (`<morrisLecarWCell>`). Note: the [Scholarpedia formulation of the model](http://www.scholarpedia.org/article/Morris-Lecar) (`<morrisLecarSCell>`) is slightly different. 
+This attempts to reproduce the model as defined [here](http://en.wikipedia.org/wiki/Morris%E2%80%93Lecar_model) (called `<morrisLecarWCell>` here). Note: the [Scholarpedia formulation of the model](http://www.scholarpedia.org/article/Morris-Lecar) (`<morrisLecarSCell>`) is slightly different. 
 
 The model ComponentType definition(s) will be moved to the core set of NeuroML2 definitions when stable!
 
