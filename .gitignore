@@ -14,3 +14,4 @@ NeuroML2/*.py
 NeuroML2/Makefile
 *.c
 *.o
+*.gen.so
