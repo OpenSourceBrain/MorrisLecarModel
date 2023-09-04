@@ -14,14 +14,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: [ 3.7, 3.9 ]
+        python-version: [ 3.9, "3.10" ] # Only test >=py3.9 as brian2 only supports that
         engine: [ jNeuroML, jNeuroML_NEURON, PyLEMS_NeuroML2, jNeuroML_Brian2 , jNeuroML_EDEN ]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Python  ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version:  ${{ matrix.python-version }}
 
