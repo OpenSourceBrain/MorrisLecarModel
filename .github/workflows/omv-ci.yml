@@ -10,7 +10,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # for eden...
     strategy:
       fail-fast: false
       matrix:
@@ -28,7 +28,7 @@ jobs:
     - name: Install OMV
       run: |
         pip install git+https://github.com/OpenSourceBrain/osb-model-validation
-        pip install scipy sympy matplotlib cython pandas tables
+        pip install scipy sympy matplotlib cython pandas tables setuptools
 
     - name: Run OMV tests on engine ${{ matrix.engine }}
       run: |
